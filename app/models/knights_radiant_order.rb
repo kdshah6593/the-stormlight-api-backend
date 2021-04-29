@@ -1,0 +1,2 @@
+class KnightsRadiantOrder < ApplicationRecord
+end
