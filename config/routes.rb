@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   namespace :api do 
     namespace :v1 do
       resources :books, only: [:index, :show, :edit, :update]
+      resources :locations, only: [:index, :show, :edit, :update]
+      resources :races, only: [:index, :show, :edit, :update]
     end
   end
 end
