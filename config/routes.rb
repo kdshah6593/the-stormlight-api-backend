@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :locations, only: [:index, :show, :edit, :update]
       resources :races, only: [:index, :show, :edit, :update]
       resources :knights_radiant_orders, only: [:index, :show, :edit, :update]
+      resources :characters, only: [:index, :show, :edit, :update]
     end
   end
 end
