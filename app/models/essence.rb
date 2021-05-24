@@ -1,0 +1,2 @@
+class Essence < ApplicationRecord
+end

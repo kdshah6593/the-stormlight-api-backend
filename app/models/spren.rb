@@ -1,0 +1,2 @@
+class Spren < ApplicationRecord
+end

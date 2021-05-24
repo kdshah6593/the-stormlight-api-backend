@@ -1,0 +1,2 @@
+class Surge < ApplicationRecord
+end
