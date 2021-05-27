@@ -8,5 +8,6 @@ class Character < ApplicationRecord
     has_one :spouse, :class_name => 'Character'
     has_many :siblings, :class_name => 'Character'
     has_many :relatives, :class_name => 'Character'
+    has_many :povBooks, :class_name => 'Pov'
 
 end
