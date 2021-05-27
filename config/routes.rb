@@ -7,6 +7,9 @@ Rails.application.routes.draw do
       resources :races, only: [:index, :show, :edit, :update]
       resources :knights_radiant_orders, only: [:index, :show, :edit, :update]
       resources :characters, only: [:index, :show, :edit, :update]
+      resources :essences, only: [:index, :show, :edit, :update]
+      resources :sprens, only: [:index, :show, :edit, :update]
+      resources :surges, only: [:index, :show, :edit, :update]
     end
   end
 end
