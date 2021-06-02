@@ -10,7 +10,7 @@ class CreateCharacters < ActiveRecord::Migration[6.1]
       t.string :affiliations, array: true, default:[]
       t.boolean :shardbearer, default: false
       t.integer :birth_year
-      t.integer :death_year, default: null
+      t.integer :death_year, default: nil
 
       t.timestamps
     end
