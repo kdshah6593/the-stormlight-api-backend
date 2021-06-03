@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_03_210035) do
+ActiveRecord::Schema.define(version: 2021_06_03_221144) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,14 +26,17 @@ ActiveRecord::Schema.define(version: 2021_06_03_210035) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
+    t.string "author"
     t.string "url"
     t.string "isbn"
-    t.integer "pages"
+    t.integer "hardcover_pages"
+    t.integer "paperback_pages"
+    t.integer "chapters"
+    t.string "book_type"
     t.string "publisher"
     t.integer "year_released"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "author"
   end
 
   create_table "characters", force: :cascade do |t|
@@ -50,6 +53,10 @@ ActiveRecord::Schema.define(version: 2021_06_03_210035) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "race_id", null: false
+    t.bigint "location_id", null: false
+    t.bigint "knights_radiant_order_id", null: false
+    t.index ["knights_radiant_order_id"], name: "index_characters_on_knights_radiant_order_id"
+    t.index ["location_id"], name: "index_characters_on_location_id"
     t.index ["race_id"], name: "index_characters_on_race_id"
   end
 
@@ -113,6 +120,8 @@ ActiveRecord::Schema.define(version: 2021_06_03_210035) do
 
   add_foreign_key "book_characters", "books"
   add_foreign_key "book_characters", "characters"
+  add_foreign_key "characters", "knights_radiant_orders"
+  add_foreign_key "characters", "locations"
   add_foreign_key "characters", "races"
   add_foreign_key "povs", "books"
   add_foreign_key "povs", "characters"
