@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_03_221144) do
+ActiveRecord::Schema.define(version: 2021_06_03_230536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,9 +55,15 @@ ActiveRecord::Schema.define(version: 2021_06_03_221144) do
     t.bigint "race_id", null: false
     t.bigint "location_id", null: false
     t.bigint "knights_radiant_order_id", null: false
+    t.bigint "father_id"
+    t.bigint "mother_id"
+    t.bigint "spouse_id"
+    t.index ["father_id"], name: "index_characters_on_father_id"
     t.index ["knights_radiant_order_id"], name: "index_characters_on_knights_radiant_order_id"
     t.index ["location_id"], name: "index_characters_on_location_id"
+    t.index ["mother_id"], name: "index_characters_on_mother_id"
     t.index ["race_id"], name: "index_characters_on_race_id"
+    t.index ["spouse_id"], name: "index_characters_on_spouse_id"
   end
 
   create_table "essences", force: :cascade do |t|
