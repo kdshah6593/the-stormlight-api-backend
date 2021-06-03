@@ -14,6 +14,8 @@
 - Nations
 - Races
 
+- CREATE SELF REFERENCE FOR CHILDREN, RELATIVES, etc similar to father mother spouse
+
 
 ## Front End
 - this will be how people can see how to use the API and what the results would look like
@@ -24,4 +26,4 @@
 ## Add Contributing Section
 ## Add Code of Conduct File
 
-## Look to hosting on Firebase
+## Look to hosting on Firebase - front end is set up and prepped with firebase
