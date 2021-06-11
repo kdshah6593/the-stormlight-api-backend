@@ -2,7 +2,7 @@ class Api::V1::CharactersController < ApplicationController
 
     def index
         @characters = Character.all
-        render json: @characters
+        render json: CharacterSerializer.new(@characters)
     end
 
     def show
