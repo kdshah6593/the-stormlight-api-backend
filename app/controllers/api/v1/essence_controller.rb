@@ -5,6 +5,10 @@ class Api::V1::EssenceController < ApplicationController
         render json: @essences
     end
 
+    def create
+        
+    end
+
     def show
 
     end

@@ -5,6 +5,10 @@ class Api::V1::LocationsController < ApplicationController
         render json: @locations
     end
 
+    def create
+        
+    end
+
     def show
 
     end

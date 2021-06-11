@@ -5,6 +5,10 @@ class Api::V1::KnightsRadiantOrdersController < ApplicationController
         render json: @knightsRadiantOrders
     end
 
+    def create
+        
+    end
+
     def show
 
     end

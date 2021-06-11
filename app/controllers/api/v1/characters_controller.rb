@@ -5,6 +5,10 @@ class Api::V1::CharactersController < ApplicationController
         render json: CharacterSerializer.new(@characters)
     end
 
+    def create
+        
+    end
+
     def show
 
     end

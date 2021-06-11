@@ -5,6 +5,10 @@ class Api::V1::RacesController < ApplicationController
         render json: @races
     end
 
+    def create
+        
+    end
+
     def show
 
     end

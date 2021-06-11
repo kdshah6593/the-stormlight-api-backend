@@ -5,6 +5,10 @@ class Api::V1::SprenController < ApplicationController
         render json: @sprens
     end
 
+    def create
+        
+    end
+
     def show
 
     end

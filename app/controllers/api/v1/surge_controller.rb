@@ -5,6 +5,10 @@ class Api::V1::SurgeController < ApplicationController
         render json: @surges
     end
 
+    def create
+        
+    end
+
     def show
 
     end
