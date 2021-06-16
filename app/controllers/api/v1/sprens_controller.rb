@@ -1,8 +1,8 @@
-class Api::V1::SprenController < ApplicationController
+class Api::V1::SprensController < ApplicationController
 
     def index
         @sprens = Spren.all
-        render json: @sprens
+        render json: SprenSerializer.new(@sprens)
     end
 
     def create

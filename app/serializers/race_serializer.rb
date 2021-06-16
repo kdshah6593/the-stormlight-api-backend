@@ -1,4 +1,4 @@
 class RaceSerializer
   include JSONAPI::Serializer
-  attributes 
+  attributes :name
 end
