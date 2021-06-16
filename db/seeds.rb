@@ -11,6 +11,7 @@ Character.destroy_all
 Race.destroy_all
 Location.destroy_all
 KnightsRadiantOrder.destroy_all
+Spren.destroy_all
 
 
 locations = [
@@ -43,8 +44,39 @@ locations = [
   { name: 'Yulay', location_type: 'country' },
 ]
 
+races = [
+  { name: 'Alethi'},
+  { name: 'Thaylen'},
+  { name: 'Veden'},
+  { name: 'Natan'},
+  { name: 'Unkalaki'},
+  { name: 'Parshendi'},
+  { name: 'Shin'},
+  { name: 'Makabaki'},
+  { name: 'Reshi'},
+  { name: 'Aimian'},
+  { name: 'Herdazian'},
+  { name: 'Purelaker'},
+  { name: 'Iriali'},
+]
+
+sprens = [
+  { name: 'Ashspren'},
+  { name: 'Liespren'},
+  { name: 'Cultivationspren'},
+  { name: 'Highspren'},
+  { name: 'Honorspren'},
+  { name: 'Inkspren'},
+  { name: 'Lightspren'},
+  { name: 'Mistspren'},
+  { name: 'Peakspren'},
+  { name: 'Godspren'}
+]
+
 locations.each {|l| Location.create(name: l[:name], location_type: l[:location_type])}
-alethi = Race.create(name: 'Alethi')
+races.each {|r| Race.create(name: r[:name])}
+sprens.each {|s| Spren.create(name: s[:name])}
+alethi = Race.find_by(name: 'Alethi')
 alethkar = Location.find_by(name: 'Alethkar')
 windrunner = KnightsRadiantOrder.create(title: 'Windrunner', bond: 'Honorspren')
 
