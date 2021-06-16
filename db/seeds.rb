@@ -12,8 +12,40 @@ Race.destroy_all
 Location.destroy_all
 KnightsRadiantOrder.destroy_all
 
+
+locations = [
+  { name: 'Aimia', location_type: 'country' },
+  { name: 'Alethkar', location_type: 'country' },
+  { name: 'Alm', location_type: 'country' },
+  { name: 'Azir', location_type: 'country' },
+  { name: 'Babatharnam', location_type: 'country' },
+  { name: 'Desh', location_type: 'country' },
+  { name: 'Frostlands', location_type: 'region' },
+  { name: 'Emul', location_type: 'country' },
+  { name: 'Greater Hexi', location_type: 'country' },
+  { name: 'Herdaz', location_type: 'country' },
+  { name: 'Iri', location_type: 'country' },
+  { name: 'Jah Keved', location_type: 'country' },
+  { name: 'Liafor', location_type: 'country' },
+  { name: 'Marabethia', location_type: 'country' },
+  { name: 'Marat', location_type: 'country' },
+  { name: 'Reshi Isles', location_type: 'region' },
+  { name: 'Rira', location_type: 'country' },
+  { name: 'Shinovar', location_type: 'country' },
+  { name: 'Steen', location_type: 'country' },
+  { name: 'Tashikk', location_type: 'country' },
+  { name: 'Thaylenah', location_type: 'country' },
+  { name: 'Triax', location_type: 'country' },
+  { name: 'Tu Bayla', location_type: 'country' },
+  { name: 'Tu Fallia', location_type: 'country' },
+  { name: 'Tukar', location_type: 'country' },
+  { name: 'Yezier', location_type: 'country' },
+  { name: 'Yulay', location_type: 'country' },
+]
+
+locations.each {|l| Location.create(name: l[:name], location_type: l[:location_type])}
 alethi = Race.create(name: 'Alethi')
-alethkar = Location.create(name: 'Alethkar', location_type: 'country')
+alethkar = Location.find_by(name: 'Alethkar')
 windrunner = KnightsRadiantOrder.create(title: 'Windrunner', bond: 'Honorspren')
 
 kaladin = Character.create(name: 'Kaladin', gender: 'Male', alive: true, birth_year: 1153, race_id: alethi.id, location_id: alethkar.id, knights_radiant_order_id: windrunner.id)
