@@ -10,7 +10,8 @@ class Api::V1::RacesController < ApplicationController
     end
 
     def show
-
+        @race = Race.find_by(id: params[:id])
+        render json: RaceSerializer.new(@race)
     end
 
     def edit

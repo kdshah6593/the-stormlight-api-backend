@@ -10,7 +10,8 @@ class Api::V1::SprensController < ApplicationController
     end
 
     def show
-
+        @spren = Spren.find_by(id: params[:id])
+        render json: SprenSerializer.new(@spren)
     end
 
     def edit

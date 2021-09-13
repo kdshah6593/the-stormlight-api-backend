@@ -1,4 +1,4 @@
 class LocationSerializer
   include JSONAPI::Serializer
-  attributes 
+  attributes :name, :location_type
 end
