@@ -10,7 +10,8 @@ class Api::V1::BooksController < ApplicationController
     end
 
     def show
-
+        @book = Book.find_by(id: params[:id])
+        render json: BookSerializer.new(@book)
     end
 
     def edit

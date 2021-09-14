@@ -27,3 +27,11 @@
 ## Add Code of Conduct File
 
 ## Look to hosting on Firebase - front end is set up and prepped with firebase
+
+
+
+- To start development for backend, make sure postgres is running (sudo service postgresql start)
+- Then run `rails s` 
+- Run `db:create` if no database
+- Run `db:migrate` to get schema
+- Run `db:seed` to prepopulate some working data
