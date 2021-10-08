@@ -1,5 +1,6 @@
 class Api::V1::BooksController < ApplicationController
-
+    before_action :authenticate_api_v1_user!
+    
     def index
         @books = Book.all
         render json: BookSerializer.new(@books)

@@ -18,8 +18,11 @@ gem 'jsonapi-serializer'
 # gem 'bcrypt', '~> 3.1.7'
 # Use Devise for Authentication
 gem 'devise'
+gem 'devise-jwt'
 # Assign Permissions to User roles
 gem 'pundit'
+# For ENV 
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
