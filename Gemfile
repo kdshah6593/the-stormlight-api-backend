@@ -16,6 +16,10 @@ gem 'jsonapi-serializer'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# Use Devise for Authentication
+gem 'devise'
+# Assign Permissions to User roles
+gem 'pundit'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
