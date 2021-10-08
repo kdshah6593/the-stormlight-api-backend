@@ -51,7 +51,7 @@ SEED THE DATABASE INITIAL ADMIN USER; users need ability to change password
 
 
 
-
+DEVISE SETUP: `https://thinkster.io/tutorials/rails-json-api/setting-up-users-and-authentication-for-our-api`
 DEVISE Instructions
 1. Ensure you have defined default url options in your environments files. Here is an example of default_url_options appropriate for a development environment in config/environments/development.rb:
 
