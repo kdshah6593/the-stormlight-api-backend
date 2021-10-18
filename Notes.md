@@ -80,3 +80,12 @@ root to: "home#index"
 rails g devise:views
 
 * Not required *
+
+
+
+CURRENTLY:
+- Have set up the user authentication; can create new users with sign up route, can login, can logout
+- Look into setting up the connection with the front-end to sign up and log users in
+- Use the before_action authenticate_user! method only for create/update actions in various models (see BooksController)
+
+- Setup multiple roles/admins with pundit
