@@ -52,7 +52,8 @@ SEED THE DATABASE INITIAL ADMIN USER; users need ability to change password
 
 
 DEVISE SETUP: `https://thinkster.io/tutorials/rails-json-api/setting-up-users-and-authentication-for-our-api`
-Authetincation SETUP: `https://medium.com/ruby-daily/a-devise-jwt-tutorial-for-authenticating-users-in-ruby-on-rails-ca214898318e`
+Authentication SETUP: `https://medium.com/ruby-daily/a-devise-jwt-tutorial-for-authenticating-users-in-ruby-on-rails-ca214898318e`
+Authentication SETUP 2: `https://dev.to/dhintz89/devise-and-jwt-in-rails-2mlj`
 DEVISE Instructions
 1. Ensure you have defined default url options in your environments files. Here is an example of default_url_options appropriate for a development environment in config/environments/development.rb:
 
