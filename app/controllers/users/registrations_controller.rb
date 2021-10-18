@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Api::V1::Users::RegistrationsController < Devise::RegistrationsController
+class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
   respond_to :json
@@ -12,7 +12,14 @@ class Api::V1::Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   # def create
-  #   super
+  #   user = User.new(sign_up_params)
+
+  #   if user.save
+  #     token = user.generate_jwt
+  #     render json: token.to_json
+  #   else
+  #     render json: { errors: { 'email or password' => ['is invalid'] } }, status: :unprocessable_entity
+  #   end
   # end
 
   # GET /resource/edit

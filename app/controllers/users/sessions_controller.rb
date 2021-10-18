@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Api::V1::Users::SessionsController < Devise::SessionsController
+class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
   respond_to :json
 
@@ -11,7 +11,14 @@ class Api::V1::Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   # def create
-  #   super
+  #   user = User.find_by_email(sign_in_params[:email])
+
+  #   if user && user.valid_password?(sign_in_params[:password])
+  #     token = user.generate_jwt
+  #     render json: token.to_json
+  #   else
+  #     render json: { errors: { 'email or password' => ['is invalid'] } }, status: :unprocessable_entity
+  #   end
   # end
 
   # DELETE /resource/sign_out
