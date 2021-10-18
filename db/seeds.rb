@@ -13,6 +13,7 @@ Location.destroy_all
 KnightsRadiantOrder.destroy_all
 Spren.destroy_all
 Book.destroy_all
+User.destroy_all
 
 
 locations = [
