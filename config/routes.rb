@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations',
+    passwords: 'users/passwords',
+  }
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   namespace :api do 
     namespace :v1 do
@@ -11,11 +17,6 @@ Rails.application.routes.draw do
       resources :essences, only: [:index, :create, :show, :edit, :update]
       resources :sprens, only: [:index, :create, :show, :edit, :update]
       resources :surges, only: [:index, :create, :show, :edit, :update]
-      devise_for :users, controllers: {
-        sessions: 'users/sessions',
-        registrations: 'users/registrations',
-        passwords: 'users/passwords',
-      }
     end
   end
 end
